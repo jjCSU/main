@@ -45,7 +45,7 @@ public class BankApplication {
         depositButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 balance += Double.parseDouble(amountField.getText());
-                amountField.setText("");
+                amountField.setText("Deposited");
             }
         });
         
@@ -53,14 +53,14 @@ public class BankApplication {
         withdrawButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 balance -= Double.parseDouble(amountField.getText());
-                amountField.setText("");
+                amountField.setText("Withdrawn");
             }
         }); 
         
         // action listener for checking balance
         balanceButton.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-        		amountField.setText("");
+        		amountField.setText("Checking Balance");
         		balanceLabel.setText("Balance: $" + String.format("%.2f", balance));
         	}
         });
